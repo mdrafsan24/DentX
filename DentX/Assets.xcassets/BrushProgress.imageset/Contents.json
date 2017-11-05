@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "if_Dental_-_Tooth_-_Dentist_-_Dentistry_06_2185081.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "if_Dental_-_Tooth_-_Dentist_-_Dentistry_06_2185081@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "if_Dental_-_Tooth_-_Dentist_-_Dentistry_06_2185081@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

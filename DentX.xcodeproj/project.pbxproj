@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5494CB471BD4B3AB55D948AA /* Pods_DentX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44042A278FDDB43070B2C34 /* Pods_DentX.framework */; };
 		8824DAF61FAE809900B8545C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824DAF51FAE809900B8545C /* AppDelegate.swift */; };
 		8824DAF81FAE809900B8545C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824DAF71FAE809900B8545C /* ViewController.swift */; };
 		8824DAFB1FAE809900B8545C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8824DAF91FAE809900B8545C /* Main.storyboard */; };
 		8824DAFE1FAE809900B8545C /* DentX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8824DAFC1FAE809900B8545C /* DentX.xcdatamodeld */; };
 		8824DB001FAE809900B8545C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8824DAFF1FAE809900B8545C /* Assets.xcassets */; };
 		8824DB031FAE809900B8545C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8824DB011FAE809900B8545C /* LaunchScreen.storyboard */; };
+		8824DB0B1FAE934B00B8545C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824DB0A1FAE934B00B8545C /* RoundButton.swift */; };
+		8824DB0D1FAEDD6C00B8545C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8824DB0C1FAEDD6C00B8545C /* GoogleService-Info.plist */; };
+		8830AC6C1FAF5DC20080B71A /* GumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8830AC6B1FAF5DC20080B71A /* GumVC.swift */; };
+		889F36B01FAF114200A5E3D0 /* TongueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F36AF1FAF114200A5E3D0 /* TongueVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		644E7C5CC154A1DEB156600A /* Pods-DentX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentX.release.xcconfig"; path = "Pods/Target Support Files/Pods-DentX/Pods-DentX.release.xcconfig"; sourceTree = "<group>"; };
 		8824DAF21FAE809900B8545C /* DentX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8824DAF51FAE809900B8545C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8824DAF71FAE809900B8545C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		8824DAFF1FAE809900B8545C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8824DB021FAE809900B8545C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8824DB041FAE809900B8545C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8824DB0A1FAE934B00B8545C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		8824DB0C1FAEDD6C00B8545C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8830AC6B1FAF5DC20080B71A /* GumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumVC.swift; sourceTree = "<group>"; };
+		889F36AF1FAF114200A5E3D0 /* TongueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongueVC.swift; sourceTree = "<group>"; };
+		E44042A278FDDB43070B2C34 /* Pods_DentX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DentX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2812C8D6887E2CA392BAC81 /* Pods-DentX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DentX/Pods-DentX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5494CB471BD4B3AB55D948AA /* Pods_DentX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8AEBC179C422FB76665323 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2812C8D6887E2CA392BAC81 /* Pods-DentX.debug.xcconfig */,
+				644E7C5CC154A1DEB156600A /* Pods-DentX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8824DAE91FAE809800B8545C = {
 			isa = PBXGroup;
 			children = (
 				8824DAF41FAE809900B8545C /* DentX */,
 				8824DAF31FAE809900B8545C /* Products */,
+				4F8AEBC179C422FB76665323 /* Pods */,
+				893D4A45C249B3F3E95CF0A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +80,7 @@
 		8824DAF41FAE809900B8545C /* DentX */ = {
 			isa = PBXGroup;
 			children = (
+				8824DB0A1FAE934B00B8545C /* RoundButton.swift */,
 				8824DAF51FAE809900B8545C /* AppDelegate.swift */,
 				8824DAF71FAE809900B8545C /* ViewController.swift */,
 				8824DAF91FAE809900B8545C /* Main.storyboard */,
@@ -63,8 +88,19 @@
 				8824DB011FAE809900B8545C /* LaunchScreen.storyboard */,
 				8824DB041FAE809900B8545C /* Info.plist */,
 				8824DAFC1FAE809900B8545C /* DentX.xcdatamodeld */,
+				8824DB0C1FAEDD6C00B8545C /* GoogleService-Info.plist */,
+				889F36AF1FAF114200A5E3D0 /* TongueVC.swift */,
+				8830AC6B1FAF5DC20080B71A /* GumVC.swift */,
 			);
 			path = DentX;
+			sourceTree = "<group>";
+		};
+		893D4A45C249B3F3E95CF0A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E44042A278FDDB43070B2C34 /* Pods_DentX.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8824DB071FAE809900B8545C /* Build configuration list for PBXNativeTarget "DentX" */;
 			buildPhases = (
+				9621B88BA0F847CA881A2512 /* [CP] Check Pods Manifest.lock */,
 				8824DAEE1FAE809900B8545C /* Sources */,
 				8824DAEF1FAE809900B8545C /* Frameworks */,
 				8824DAF01FAE809900B8545C /* Resources */,
+				D9152F6E1249735E17D94B31 /* [CP] Embed Pods Frameworks */,
+				E24BFB0C7F5B1EDC13951071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,19 +168,71 @@
 				8824DB031FAE809900B8545C /* LaunchScreen.storyboard in Resources */,
 				8824DB001FAE809900B8545C /* Assets.xcassets in Resources */,
 				8824DAFB1FAE809900B8545C /* Main.storyboard in Resources */,
+				8824DB0D1FAEDD6C00B8545C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9621B88BA0F847CA881A2512 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9152F6E1249735E17D94B31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentX/Pods-DentX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E24BFB0C7F5B1EDC13951071 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentX/Pods-DentX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8824DAEE1FAE809900B8545C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8824DB0B1FAE934B00B8545C /* RoundButton.swift in Sources */,
 				8824DAF81FAE809900B8545C /* ViewController.swift in Sources */,
 				8824DAFE1FAE809900B8545C /* DentX.xcdatamodeld in Sources */,
 				8824DAF61FAE809900B8545C /* AppDelegate.swift in Sources */,
+				8830AC6C1FAF5DC20080B71A /* GumVC.swift in Sources */,
+				889F36B01FAF114200A5E3D0 /* TongueVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +367,7 @@
 		};
 		8824DB081FAE809900B8545C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2812C8D6887E2CA392BAC81 /* Pods-DentX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +383,7 @@
 		};
 		8824DB091FAE809900B8545C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 644E7C5CC154A1DEB156600A /* Pods-DentX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

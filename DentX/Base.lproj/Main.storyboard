@@ -1,24 +1,500 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DentX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lZH-XG-6eW">
+                                <rect key="frame" x="41.5" y="20" width="292.5" height="164"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-e7-eEA">
+                                        <rect key="frame" x="0.0" y="49.5" width="128.5" height="65"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="56"/>
+                                        <color key="textColor" red="0.20635924994438617" green="0.34580078061951564" blue="0.47423828125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ToothX" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-h1-TQe">
+                                        <rect key="frame" x="128.5" y="0.0" width="164" height="164"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="164" id="ClQ-vC-Smn"/>
+                                            <constraint firstAttribute="height" constant="164" id="LlC-Oo-2Zj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U2o-h1-TQe" firstAttribute="centerY" secondItem="qe7-e7-eEA" secondAttribute="centerY" id="5wD-4r-7tc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="-22" translatesAutoresizingMaskIntoConstraints="NO" id="k2X-xm-537">
+                                <rect key="frame" x="46" y="204" width="283" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BrushProgress" translatesAutoresizingMaskIntoConstraints="NO" id="e1l-c5-I0Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="GiA-FT-eYX"/>
+                                            <constraint firstAttribute="height" constant="100" id="dWF-2c-cet"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-au-Vzl" customClass="RoundButton" customModule="DentX" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="60" width="205" height="40"/>
+                                        <color key="backgroundColor" red="0.5355105996131897" green="0.66548573970794678" blue="0.98849564790725708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        <state key="normal" title="Brush Progress">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="19A-rN-IMp" kind="show" id="fq0-Tn-rzG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="-22" translatesAutoresizingMaskIntoConstraints="NO" id="cxU-YW-UzH">
+                                <rect key="frame" x="54.5" y="314" width="266" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckTongue" translatesAutoresizingMaskIntoConstraints="NO" id="avL-GT-Zeq">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8Ls-M9-JNz"/>
+                                            <constraint firstAttribute="height" constant="100" id="W3K-5I-Zt0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOW-tq-PdK" customClass="RoundButton" customModule="DentX" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="60" width="188" height="40"/>
+                                        <color key="backgroundColor" red="0.23156595230102539" green="0.41639411449432373" blue="0.46092718839645386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        <state key="normal" title="Check Tongue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="SEm-g7-WrA" kind="show" id="4zu-kc-eI9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="nMD-Qc-O09"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="-22" translatesAutoresizingMaskIntoConstraints="NO" id="syz-dN-iVy">
+                                <rect key="frame" x="65.5" y="424" width="244.5" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GumCheck" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-Nw-Q6r">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="HPN-9g-edT"/>
+                                            <constraint firstAttribute="width" constant="100" id="Upt-bP-Zhm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jN-dc-uUM" customClass="RoundButton" customModule="DentX" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="60" width="166.5" height="40"/>
+                                        <color key="backgroundColor" red="0.94152849912643433" green="0.52389246225357056" blue="0.60838061571121216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        <state key="normal" title="Check Gums">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="1ja-it-iQ6" kind="show" id="3cj-pC-cF0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Vxh-m0-WOv"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-13" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-8N-DZR">
+                                <rect key="frame" x="-34" y="639" width="442" height="43"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-r5-uN6">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="XbD-Ts-y4t"/>
+                                            <constraint firstAttribute="width" constant="46" id="t8H-fk-vb8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-UU-zuz">
+                                        <rect key="frame" x="33" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="1xW-PG-43X"/>
+                                            <constraint firstAttribute="width" constant="46" id="6qc-wU-SNd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="blV-uj-CyF">
+                                        <rect key="frame" x="66" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="YC9-0s-dkI"/>
+                                            <constraint firstAttribute="width" constant="46" id="aZb-I1-L00"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="0Ig-u4-ikK">
+                                        <rect key="frame" x="99" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="sFk-dO-rqy"/>
+                                            <constraint firstAttribute="height" constant="43" id="xrD-hb-rTz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-mE-wIe">
+                                        <rect key="frame" x="132" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="Lgt-Js-RhO"/>
+                                            <constraint firstAttribute="height" constant="43" id="lxu-AE-3dm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="A7c-AK-mRE">
+                                        <rect key="frame" x="165" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="eRQ-bP-FOy"/>
+                                            <constraint firstAttribute="width" constant="46" id="sQD-uE-PlT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-dr-Ah7">
+                                        <rect key="frame" x="198" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="0h4-lA-pka"/>
+                                            <constraint firstAttribute="height" constant="43" id="eBF-EL-bKD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="WoC-f5-8d5">
+                                        <rect key="frame" x="231" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="8E0-Ii-euz"/>
+                                            <constraint firstAttribute="height" constant="43" id="Tuv-RG-Sc4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="MUG-Pr-OIS">
+                                        <rect key="frame" x="264" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="3Ey-2w-Yqc"/>
+                                            <constraint firstAttribute="height" constant="43" id="TED-48-7bT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="DKS-vZ-lbg">
+                                        <rect key="frame" x="297" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="maf-h1-EE9"/>
+                                            <constraint firstAttribute="height" constant="43" id="shJ-p7-hQm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="7OY-Nw-1EY">
+                                        <rect key="frame" x="330" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="oFD-sa-fVs"/>
+                                            <constraint firstAttribute="height" constant="43" id="uxX-P3-N6C"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="zSQ-QI-8r9">
+                                        <rect key="frame" x="363" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="kT8-42-piH"/>
+                                            <constraint firstAttribute="width" constant="46" id="ywf-Wy-KZQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dentist" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-Ic-TCy">
+                                        <rect key="frame" x="396" y="0.0" width="46" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="BCm-jM-6ST"/>
+                                            <constraint firstAttribute="height" constant="43" id="h6S-Wb-jyN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lZH-XG-6eW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1hY-Dy-bhc"/>
+                            <constraint firstItem="k2X-xm-537" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Bs-fd-t9P"/>
+                            <constraint firstItem="k2X-xm-537" firstAttribute="top" secondItem="lZH-XG-6eW" secondAttribute="bottom" constant="20" id="G7v-RY-dGS"/>
+                            <constraint firstItem="zMG-8N-DZR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="15" id="H2U-Zw-5zH"/>
+                            <constraint firstItem="zMG-8N-DZR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MkO-62-OZr"/>
+                            <constraint firstItem="cxU-YW-UzH" firstAttribute="top" secondItem="k2X-xm-537" secondAttribute="bottom" constant="10" id="dlk-pT-kYY"/>
+                            <constraint firstItem="cxU-YW-UzH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgU-Tx-c9v"/>
+                            <constraint firstItem="syz-dN-iVy" firstAttribute="top" secondItem="cxU-YW-UzH" secondAttribute="bottom" constant="10" id="gq2-vf-uqI"/>
+                            <constraint firstItem="lZH-XG-6eW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="guj-rv-qbz"/>
+                            <constraint firstItem="syz-dN-iVy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGc-eO-JjG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7O0-lg-nrl">
+            <objects>
+                <viewController id="19A-rN-IMp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTh-uV-1Vs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-Zq-XvH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.5355105996131897" green="0.66548573970794678" blue="0.98849564790725708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Yff-BJ-7G4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teeth" translatesAutoresizingMaskIntoConstraints="NO" id="R0O-2H-ngg">
+                                <rect key="frame" x="17" y="177" width="340" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="3dS-9a-glj"/>
+                                    <constraint firstAttribute="width" constant="340" id="oKX-y8-lTN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Brushed On: Nov 5 10:03 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6h-h2-BlB">
+                                <rect key="frame" x="16" y="543" width="343" height="80"/>
+                                <color key="backgroundColor" red="0.39987381730761906" green="0.61524970310878924" blue="0.90809774399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="G59-kJ-3VJ"/>
+                                    <constraint firstAttribute="height" constant="80" id="e0h-UL-LiP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djq-rd-POj">
+                                <rect key="frame" x="16" y="98" width="61" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="IAh-8p-VRn"/>
+                                    <constraint firstAttribute="width" constant="61" id="kPX-zv-omK"/>
+                                </constraints>
+                                <state key="normal" image="if_back-alt_134226"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="SEm-g7-WrA" eventType="touchUpInside" id="VuD-YH-eTV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ld1-cA-dGl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VXh-Zq-XvH" firstAttribute="trailing" secondItem="Wi1-Hc-zmd" secondAttribute="trailing" id="3dS-LQ-IAt"/>
+                            <constraint firstItem="VXh-Zq-XvH" firstAttribute="top" secondItem="Wi1-Hc-zmd" secondAttribute="top" id="BXI-Bz-WBP"/>
+                            <constraint firstItem="Djq-rd-POj" firstAttribute="leading" secondItem="Wi1-Hc-zmd" secondAttribute="leading" constant="16" id="EWs-ye-liY"/>
+                            <constraint firstItem="VXh-Zq-XvH" firstAttribute="leading" secondItem="Wi1-Hc-zmd" secondAttribute="leading" id="Xgu-Ti-kFA"/>
+                            <constraint firstItem="Wi1-Hc-zmd" firstAttribute="bottom" secondItem="k6h-h2-BlB" secondAttribute="bottom" constant="44" id="YnE-UP-iy0"/>
+                            <constraint firstItem="k6h-h2-BlB" firstAttribute="centerX" secondItem="qTh-uV-1Vs" secondAttribute="centerX" id="kkj-Xc-ExB"/>
+                            <constraint firstItem="R0O-2H-ngg" firstAttribute="centerY" secondItem="qTh-uV-1Vs" secondAttribute="centerY" id="qtT-0y-4MI"/>
+                            <constraint firstItem="R0O-2H-ngg" firstAttribute="centerX" secondItem="qTh-uV-1Vs" secondAttribute="centerX" id="sFq-hf-7Aa"/>
+                            <constraint firstItem="Djq-rd-POj" firstAttribute="top" secondItem="VXh-Zq-XvH" secondAttribute="bottom" constant="8" id="wAV-qf-mYe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wi1-Hc-zmd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPH-R8-Tv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.6" y="-195.6521739130435"/>
+        </scene>
+        <!--TongueVC-->
+        <scene sceneID="Acm-an-2wj">
+            <objects>
+                <viewController id="SEm-g7-WrA" customClass="TongueVC" customModule="DentX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oAA-87-nPe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tongue Checkup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS6-HA-vKi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.23156595230102539" green="0.41639411449432373" blue="0.46092718839645386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="b6a-bE-OOe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tS-m9-VFa">
+                                <rect key="frame" x="0.0" y="614" width="61" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="7FN-bM-1sv"/>
+                                    <constraint firstAttribute="height" constant="53" id="unt-wD-1EA"/>
+                                </constraints>
+                                <state key="normal" image="if_back-alt_134226"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="SEm-g7-WrA" eventType="touchUpInside" id="hfT-zf-Ijc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Cq-uK-RRS">
+                                <rect key="frame" x="67" y="118" width="240" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Pqs-14-MqX"/>
+                                    <constraint firstAttribute="height" constant="225" id="fZ0-gf-Euy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probability of Gastritis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-wq-rmq">
+                                <rect key="frame" x="16" y="368" width="343" height="80"/>
+                                <color key="backgroundColor" red="0.90809774398803711" green="0.47315990924835205" blue="0.45876008272171021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WJV-Sq-JbT"/>
+                                    <constraint firstAttribute="width" constant="343" id="eVu-6j-k4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shK-HF-HYi">
+                                <rect key="frame" x="127.5" y="478" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.94058593749999997" green="0.60926704490380834" blue="0.39990961036008571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Yms-K9-BMC"/>
+                                    <constraint firstAttribute="width" constant="120" id="cTY-uw-pui"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XS6-HA-vKi" firstAttribute="top" secondItem="IL5-1j-VWx" secondAttribute="top" id="3OV-kp-gRp"/>
+                            <constraint firstItem="wgK-wq-rmq" firstAttribute="centerX" secondItem="oAA-87-nPe" secondAttribute="centerX" id="7vZ-YN-dmP"/>
+                            <constraint firstItem="shK-HF-HYi" firstAttribute="centerX" secondItem="oAA-87-nPe" secondAttribute="centerX" id="8rt-R6-b7Q"/>
+                            <constraint firstItem="4tS-m9-VFa" firstAttribute="bottom" secondItem="IL5-1j-VWx" secondAttribute="bottom" id="AnV-29-sdL"/>
+                            <constraint firstItem="8Cq-uK-RRS" firstAttribute="top" secondItem="XS6-HA-vKi" secondAttribute="bottom" constant="28" id="LSk-FZ-JOA"/>
+                            <constraint firstItem="8Cq-uK-RRS" firstAttribute="centerX" secondItem="oAA-87-nPe" secondAttribute="centerX" id="VXm-c0-0Dj"/>
+                            <constraint firstItem="shK-HF-HYi" firstAttribute="top" secondItem="wgK-wq-rmq" secondAttribute="bottom" constant="30" id="YMc-km-gtx"/>
+                            <constraint firstItem="wgK-wq-rmq" firstAttribute="top" secondItem="8Cq-uK-RRS" secondAttribute="bottom" constant="25" id="fQ3-Id-3Hm"/>
+                            <constraint firstItem="XS6-HA-vKi" firstAttribute="trailing" secondItem="IL5-1j-VWx" secondAttribute="trailing" id="kPq-uF-MGK"/>
+                            <constraint firstItem="4tS-m9-VFa" firstAttribute="leading" secondItem="IL5-1j-VWx" secondAttribute="leading" id="n9D-sP-kMg"/>
+                            <constraint firstItem="XS6-HA-vKi" firstAttribute="leading" secondItem="IL5-1j-VWx" secondAttribute="leading" id="qYZ-Lb-F2Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IL5-1j-VWx"/>
+                    </view>
+                    <connections>
+                        <outlet property="probGastritis" destination="shK-HF-HYi" id="BJy-Rw-o62"/>
+                        <outlet property="tonguePic" destination="8Cq-uK-RRS" id="9N0-7X-W0X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0g-BB-4W9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.6" y="470.91454272863569"/>
+        </scene>
+        <!--GumVC-->
+        <scene sceneID="FWP-Hd-NpQ">
+            <objects>
+                <viewController id="1ja-it-iQ6" customClass="GumVC" customModule="DentX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Trq-Jd-4ZP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gums Checkup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC0-ZZ-Ifa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.94181030988693237" green="0.52679789066314697" blue="0.60839837789535522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cMx-BU-g9z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrK-Nx-6FN">
+                                <rect key="frame" x="67" y="118" width="240" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="cik-Ny-24n"/>
+                                    <constraint firstAttribute="width" constant="240" id="idP-51-mMT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTR-YT-21p">
+                                <rect key="frame" x="0.0" y="614" width="61" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="881-fa-XfD"/>
+                                    <constraint firstAttribute="height" constant="53" id="I2i-3G-eUf"/>
+                                </constraints>
+                                <state key="normal" image="if_back-alt_134226"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="1ja-it-iQ6" eventType="touchUpInside" id="EL5-E1-tWd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probability of Gum Disease" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D63-Wh-2mu">
+                                <rect key="frame" x="16" y="368" width="343" height="80"/>
+                                <color key="backgroundColor" red="0.59416554490186102" green="0.64836734370346816" blue="0.90809774399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Z5H-ym-liX"/>
+                                    <constraint firstAttribute="height" constant="80" id="oOH-vS-8P8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxJ-Mr-GLZ">
+                                <rect key="frame" x="127" y="478" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.96699218749999993" green="0.44478854219704272" blue="0.40493409448685092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4dg-Qs-gtB"/>
+                                    <constraint firstAttribute="height" constant="120" id="V0p-4A-6R0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D63-Wh-2mu" firstAttribute="top" secondItem="rrK-Nx-6FN" secondAttribute="bottom" constant="25" id="2yD-q7-qum"/>
+                            <constraint firstItem="jTR-YT-21p" firstAttribute="leading" secondItem="bsc-Aq-Tdi" secondAttribute="leading" id="4fS-j3-4aS"/>
+                            <constraint firstItem="OC0-ZZ-Ifa" firstAttribute="top" secondItem="bsc-Aq-Tdi" secondAttribute="top" id="5U1-Ea-mkK"/>
+                            <constraint firstItem="D63-Wh-2mu" firstAttribute="centerX" secondItem="Trq-Jd-4ZP" secondAttribute="centerX" id="5aa-i0-UCE"/>
+                            <constraint firstItem="OC0-ZZ-Ifa" firstAttribute="leading" secondItem="bsc-Aq-Tdi" secondAttribute="leading" id="7qW-Xe-hon"/>
+                            <constraint firstItem="jTR-YT-21p" firstAttribute="bottom" secondItem="bsc-Aq-Tdi" secondAttribute="bottom" id="DFw-rB-9fP"/>
+                            <constraint firstItem="WxJ-Mr-GLZ" firstAttribute="centerX" secondItem="Trq-Jd-4ZP" secondAttribute="centerX" id="FZg-tE-vHf"/>
+                            <constraint firstItem="OC0-ZZ-Ifa" firstAttribute="trailing" secondItem="bsc-Aq-Tdi" secondAttribute="trailing" id="OGZ-3Y-HNp"/>
+                            <constraint firstItem="WxJ-Mr-GLZ" firstAttribute="top" secondItem="D63-Wh-2mu" secondAttribute="bottom" constant="30" id="dXp-Qd-gAg"/>
+                            <constraint firstItem="rrK-Nx-6FN" firstAttribute="top" secondItem="OC0-ZZ-Ifa" secondAttribute="bottom" constant="28" id="dqt-Wh-vlW"/>
+                            <constraint firstItem="rrK-Nx-6FN" firstAttribute="centerX" secondItem="Trq-Jd-4ZP" secondAttribute="centerX" id="z7b-06-zoY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bsc-Aq-Tdi"/>
+                    </view>
+                    <connections>
+                        <outlet property="GumPic" destination="rrK-Nx-6FN" id="kCO-c7-wAz"/>
+                        <outlet property="probGumDisease" destination="WxJ-Mr-GLZ" id="H7U-hP-btH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxX-i5-q8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="894"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BrushProgress" width="87" height="91"/>
+        <image name="CheckTongue" width="87" height="104"/>
+        <image name="Dentist" width="128" height="128"/>
+        <image name="GumCheck" width="87" height="101"/>
+        <image name="Teeth" width="512" height="512"/>
+        <image name="ToothX" width="160" height="139"/>
+        <image name="if_back-alt_134226" width="128" height="128"/>
+    </resources>
 </document>
